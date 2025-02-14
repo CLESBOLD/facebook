@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+#container{
+    /* border: 2px solid black; */
+    height: 150px;
+    width: 500px;
+    margin-top: 250px;
+    margin-left: 70px;
+    display: inline-block;
+    position: absolute;
+
+}
+
+.logo{
+    height: 500px;
+    background-image: url(img.png);
+    background-repeat: no-repeat;
+}
+
+#loginContainer{
+    border: 2px solid white;
+    background-color: #FFFFFF;
+    height: 310px;
+    width: 400px;
+    position: absolute;
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: 900px;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+input{
+    border: 3px solid #F0F2F5;
+    border-color:#F0F2F5;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    /* position: absolute; */
+    /* line-height:x; */
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-left: 10px;
+
+}
+
+
+button{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;   
+    margin-top: 10px;
+    margin-left: 50px;
+    color: white;
+    background-color: #0165E1;
+}
+
+a{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;   
+    color: #0165E1;
+    margin-left: 150px;   
+}
+
+#line{
+    border: 1px solid #F0F2F5;
+    width: 380px;
+    margin-left: 10px;
+}
+
+#newAccount{
+    margin-top: 0px;
+    width: 200px;
+    margin-left: 100px;
+    color: white;
+    background-color: #02bc02;
+}

